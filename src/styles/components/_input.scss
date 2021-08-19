@@ -1,0 +1,98 @@
+.input-form--default {
+    @include input-form;
+    @include flex-row;
+    @include flex-center;
+
+    width: 32rem;
+
+    &__input {
+        height: 4.5rem;
+        width: 32rem;
+        border-radius: 1rem;
+        box-shadow: var(--nm-engrave--shallow);
+        font-family: 'Roboto Condensed' sans-serif;
+    }
+}      
+
+.input-form--default__input:focus ~ .input-form--default__label,
+.input-form--default__input:not(:placeholder-shown).input-form--default__input:not(:focus) ~ .input-form--default__label {
+    top: -3rem;
+}
+
+.input-form--long {
+    @include input-form;
+    width: 37rem;
+
+    &__input {
+        height: 4.5rem;
+        width: 37rem;
+        border-radius: 1rem;
+        box-shadow: var(--nm-engrave--shallow);
+        font-family: 'Roboto Condensed' sans-serif;
+    }
+}
+
+.input-form--long__input:focus ~ .input-form--long__label,
+.input-form--long__input:not(:placeholder-shown).input-form--long__input:not(:focus) ~ .input-form--long__label {
+    top: -3rem;
+}
+
+.input-form--extra-long {
+    @include input-form;
+    width: 117rem;
+    max-width: 80vw;
+    margin: 0 auto;
+
+    &__input {
+        height: 4.5rem;
+        width: 117rem;
+        max-width: 80vw;
+        margin: 0 auto;
+        border-radius: 1rem;
+        box-shadow: var(--nm-engrave--shallow);
+        font-family: 'Roboto Condensed' sans-serif;
+    }
+}
+
+.input-form--extra-long__input:focus ~ .input-form--extra-long__label,
+.input-form--extra-long__input:not(:placeholder-shown).input-form--extra-long__input:not(:focus) ~ .input-form--extra-long__label {
+    top: -3rem;
+}
+
+.textarea--default {
+    @include textarea;    
+    // width: 37rem;
+    width: 50rem;
+    box-shadow: var(--nm-engrave--shallow);
+
+    &__textarea {
+        // width: 37rem;
+        // height: 20rem;
+        max-width: 60vw;
+        // max-height: 20rem;
+        max-height: 30rem;
+        box-shadow: var(--nm-engrave--shallow);
+    }
+}
+
+.textarea--default__textarea:focus ~ .textarea--default__label,
+.textarea--default__textarea:not(:placeholder-shown).textarea--default__textarea:not(:focus) ~ .textarea--default__label {
+    top: -3rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: var(--font-color-primary);
+    box-shadow: var(--nm-engrave-default);
+    -webkit-box-shadow: var(--nm-engrave-default);
+    font-family: 'Roboto Condensed' sans-serif;
+}

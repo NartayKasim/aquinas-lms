@@ -1,0 +1,99 @@
+@keyframes bevelContainer {
+    0% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: var(--nm-bevel);
+    }
+}
+
+@keyframes embossContainer {
+    0% {
+        box-shadow: none;
+        width: 30rem;
+    }
+    80% {
+        width: 29.1rem;
+    }
+    100% {
+        width: 29rem;
+        box-shadow: var(--nm-emboss);
+    }
+}
+
+@keyframes inputTextDelay {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        color: var(--font-color-primary);
+    }
+}
+
+@keyframes hoverEnlarge {
+    0% {
+        font-size: var(--font-size-primary);
+    }
+
+    100% {
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes resolveNmWrapper {
+    0% {
+        background: var(--color-bg--primary);
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: var(--nm-emboss-default);
+        background: linear-gradient(315deg, rgba(240,240,240,0.1) 0%, rgba(240,240,240,1) 55%, rgba(68,103,149,0.148325545064519) 100%, rgba(240,240,240,1) 100%);
+    }
+}
+
+@keyframes hoverEdit {
+    from {
+            font-size: var(--font-size-primary);
+    }
+
+    to {
+            font-size: 2.1rem;
+    }
+}
+
+@keyframes fadeInModal {
+    from {
+        width: 20rem;
+        height: 5rem;
+        opacity: .3;
+    }
+    to {
+        width: 65rem;
+        height: 35rem;
+        opacity: 1;
+    }
+}
+
+@keyframes showContentsAfterModalFadeIn {
+    form {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeConfirmMessages {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

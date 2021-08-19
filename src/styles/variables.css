@@ -1,0 +1,54 @@
+:root {
+
+    /* SHADING FOR 3D EXTRUSION EFFECT: */
+    --nm-emboss-default:
+        -5px -5px 8px #ffffff, 
+        -5px -5px 20px #ffffff,
+        3px 3px 15px rgba(94, 104, 121, 0.678);
+    --nm-emboss--shallow:
+        -4px -4px 5px white,
+        4px 4px 5px rgba(94, 104, 121, 0.534);
+
+    --nm-button-emboss--inner: 
+        -3px -3px 9px #ffffff83,
+        -1px -1px 2px #ffffff83,
+        3px 3px 7px rgba(94,104,121,0.688);
+    --nm-button-emboss--outer:
+        3px 3px 4px #ababab79,
+        -8px -8px 6px #ffffffa6;
+
+    /* SHADING FOR 3D STAMP EFFECT: */
+    --nm-engrave-default:
+        inset -4px -4px 10px #ffffff,
+        inset 3px 3px 7px rgba(94,104,121,0.688);
+    --nm-engrave--shallow:
+        inset -4px -4px 3px #ffffff,
+        inset 3px 3px 2px rgba(94, 104, 121, 0.377);
+
+    --color-primary: #ddebf1;
+    --color-secondary: #44679594;
+    --color-bg--primary: rgb(240, 240, 240);
+    --color-bg--secondary: #ddebf1;
+    --color-bg--tertiary: #b3d1e1;
+
+    --font-family: 'Asap Condensed', sans-serif;
+    --font-color-primary: #446795;
+    --font-color-secondary: #7C94b4;
+    --font-color-tertiary: #b4c2d4;
+    --font-color-quaternary: #d9e0e9;
+    --font-size-primary: 1.8rem;
+
+    --font-weight-default: 400;
+    --font-weight--400: 400;
+    --font-weight--500: 500;
+    --font-weight--600: 600;
+    --font-weight--700: 700;
+    --font-weight--800: 800;
+    --font-weight--900: 900;
+
+    --width-default: 37rem;
+}
+
+.h1 {
+    font-size: var(--font-size-header);
+}

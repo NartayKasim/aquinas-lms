@@ -1,0 +1,56 @@
+@import "variables";
+@import "mixins";
+
+@import "./components/buttons";
+@import "./components/input";
+@import "./components//dashboard/course-cards.scss";
+@import "./components/dashboard/dashboard-navigation.scss";
+
+
+@import "./animations/animations";
+
+@import "./pages/login-page";
+@import "./pages/dashboard-page";
+@import "./pages/landing-page";
+@import "./pages/course-page";
+@import "./pages/unit-page";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: var(--color-bg--primary);
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    color: var(--font-color-primary);
+    font-size: var(--font-size-primary);
+    font-weight: var(--font-weight-default);
+    line-height: 3rem;
+    font-smooth: 2rem;
+}
+
+a {
+    color: var(--font-color-primary);
+    text-decoration: none;
+}
+
+
+.link-wrapper {
+    padding: 1rem 2rem;
+    background-color: var(--color-bg--primary);
+    box-shadow: 
+        -3px -3px 2px white,
+        3px 3px 3px rgb(150, 150, 150);
+    border-radius: 1rem;
+}
+
+

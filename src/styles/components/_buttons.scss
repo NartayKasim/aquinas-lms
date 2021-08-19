@@ -1,0 +1,115 @@
+.button-default {
+    @include flex-row;
+    @include flex-center;
+    cursor: pointer;
+	position: relative;
+	max-height: 5rem;
+    width: 25rem;
+    padding: 1.8rem 2.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border-style: none;
+    box-shadow: var(--nm-emboss-default);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size-primary);
+    color: var(--font-color-primary);
+
+    &:hover {
+        box-shadow: var(--nm-emboss--shallow);
+    }
+
+    &:active {
+        box-shadow: var(--nm-engrave--shallow);
+    }
+}
+
+.button--shallow {
+    @include flex-row;
+    @include flex-center;
+    cursor: pointer;
+	position: relative;
+	max-height: 5rem;
+    width: 25rem;
+    padding: 1.8rem 2.5rem;
+    border-radius: 1rem;
+    border-style: none;
+    box-shadow: var(--nm-emboss--shallow);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size-primary);
+    color: var(--font-color-primary);
+}
+
+.button--shaded {
+    @include nm-shading;
+    @include flex-row;
+    @include flex-center;
+    min-width: 12rem;
+    margin: 0 2.5rem;
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--nm-emboss-default);
+    cursor: pointer;
+    border: none;
+}
+
+.login-page-buttons {
+    width: 20rem;
+    margin: 0 2.5rem;
+    padding: 2rem;
+    cursor: pointer;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size-primary);
+    color: var(--font-color-primary);
+    
+    &:hover {
+        box-shadow: var(--nm-emboss--shallow);
+    }
+
+    &:active {
+        box-shadow: var(--nm-engrave--shallow);
+    }
+}
+
+.options-circle {
+    @include nm-shading;
+    @include flex-column;
+    @include flex-center;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 5.5rem;
+    box-shadow: var(--nm-emboss--shallow);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: var(--nm-emboss-default);
+    }
+
+    &:active {
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.137);
+    }
+}
+
+.edit-block__options {
+    @include flex-row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 2rem 0 0 0;
+    // box-shadow: var(--nm-emboss--shallow);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: var(--nm-emboss--shallow);
+    }
+
+    &:active {
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.137);
+    }
+}

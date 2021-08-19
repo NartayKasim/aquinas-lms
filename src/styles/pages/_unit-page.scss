@@ -1,0 +1,320 @@
+.unit-module--units {
+    @include flex-column;
+    width: 120rem;
+    max-width: 100vw;
+    margin: 0 auto;
+    position: relative;
+    box-shadow:
+        -5px -5px 8px #ffffff, 
+        2px 1px 4px rgba(96, 104, 118, 0.624);
+    border: 3px solid white;
+    border-radius: 2rem;
+    padding: 1rem;
+    position: relative;
+    min-height: 30rem;
+    padding-bottom: 15rem;
+    margin-bottom: 6rem;
+
+    &__hint {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        border-bottom: 3px solid white;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+    }
+
+    .no-modules-message {
+        @include flex-row;
+        @include flex-center;
+        width: 120rem;
+        max-width: 100vw;
+        min-height: 30rem;
+        border-radius: 2rem;
+        padding: 4rem;
+        margin-bottom: 8rem;
+        text-decoration: underline;
+    }
+    
+    .move-delete-confirmation {
+        position: absolute;
+        bottom: 4.5rem;
+        left: 4.5rem;
+        opacity: 1;
+        animation: fadeConfirmMessages 3s forwards;
+    }
+}
+
+.add-module-button {
+    @include flex-row;
+    align-items: center;
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    font-weight: 500;
+    transition: scale .5s;
+
+    span {
+        margin: 0 2rem;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .extra-large {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 20rem;
+    }
+
+    &:hover {
+        scale: 1.05;
+    }
+}
+
+.detailed-module {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 3px solid white;
+    margin: 2rem 0;
+    position: relative;
+    height: 8rem;
+    transition: box-shadow .25s;
+
+    &:hover {
+        box-shadow: var(--nm-emboss-default);
+    }
+
+    &:active {
+        box-shadow: var(--nm-engrave--shallow);
+    }
+
+    &__title-description {
+        @include flex-row;
+        cursor: pointer;
+    }
+
+    &__arrows {
+        @include flex-row;
+        position: absolute;
+        right: 0;
+
+        div {
+            @include flex-column;
+            @include flex-center;
+            margin: 0 2rem;
+            cursor: pointer;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 5rem;
+            box-shadow: var(--nm-emboss--shallow);
+
+        }
+
+        .engrave-click:hover  {
+            box-shadow: var(--nm-emboss-default);
+        }
+
+        .engrave-click:active {
+            box-shadow: var(--nm-engrave--shallow);
+        }
+    }
+}
+
+.new-module--text-editor {
+    @include flex-column;
+    @include flex-center;
+    width: 120rem;
+    max-width: 100vw;
+    margin: 5rem auto;
+    position: relative;
+    box-shadow:
+        -5px -5px 8px #ffffff, 
+        2px 1px 4px rgba(96, 104, 118, 0.624);
+    border: 3px solid white;
+    border-radius: 2rem;
+    position: relative;
+    min-height: 70rem;
+    padding: 1rem;
+    padding-left: 1.1rem;
+
+    &__section_title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        border-bottom: 3px solid white;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+    }
+
+    &__title {
+        margin-bottom: 3rem;
+    }
+
+    &__description {
+        margin-bottom: 3rem;
+    }
+
+    .quill  {
+        margin-top: .5rem;
+        height: 70rem;
+        width: 115rem;
+    }
+
+    &__file-upload {
+        .upload-files__list-upload {
+            @include flex-column;
+            width: 115rem;
+            max-width: 98vw;
+            align-items: flex-start;
+
+            &__right {
+                @include flex-row;
+                @include flex-center;
+                margin-left: 1rem;
+
+                .upload-input {
+                    margin: 2rem 0;
+                }
+                .upload-button {
+                    cursor: pointer;
+                    margin: 1rem 4rem;
+                    border-bottom: 3px solid white;
+                    transition: scale .5s;
+                    width: 5rem;
+        
+                    &:hover {
+                        border-bottom: 3px solid var(--font-color-primary);
+                        scale: 1.05;
+                    }
+                }
+            }
+
+            &__left {
+                @include flex-column;
+                margin-left: 1rem;
+                &--title {
+                    text-decoration: underline;
+                }
+ 
+
+            }
+        }
+        
+    }
+
+    &__options {
+        @include flex-row;
+        justify-content: flex-end;
+        cursor: pointer;
+        width: 100%;
+
+        &__option {
+            margin: 2rem 4rem;
+            border-bottom: 3px solid white;
+            transition: scale .5s;
+
+            &:hover {
+                border-bottom: 3px solid var(--font-color-primary);
+                scale: 1.05;
+            }
+        }
+
+        .duplicate-module-name {
+            margin-top: 2.3rem;
+            text-decoration: underline;
+        }
+    }
+}
+
+.view-module-unpacked {
+    @include flex-column;
+    width: 120rem;
+    max-width: 100vw;
+    margin: 5rem auto;
+    border-radius: 2rem;
+    box-shadow:
+        -5px -5px 8px #ffffff, 
+        2px 1px 4px rgba(96, 104, 118, 0.624);
+    border: 3px solid white;
+    position: relative;
+    padding: 1rem;
+    min-height: 20rem;
+
+    &__title {
+        @include flex-row;
+        @include flex-center;
+        height: 3.5rem;
+        margin: 5rem auto;
+        width: 100%;
+        border-radius: 1rem;
+        padding: 2rem;
+        font-size: 3.2rem;
+        font-weight: 500;
+
+    }
+
+    &__description {
+        @include flex-column;
+        margin: 1rem auto;
+        width: 90%;
+        margin: 0 auto;
+        min-height: 5rem;
+        border-radius: 1rem;
+    }
+
+    &__flare {
+        height: 1.5rem;
+        width: 90%;
+        margin: 3rem auto;
+        border-radius: 1rem;
+        box-shadow: var(--nm-engrave-default);
+    }
+
+    &__content {
+        @include flex-column;
+        width: 90%;
+        margin: auto;
+
+        &__content-section {
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+    }
+
+    &__files {
+        @include flex-column;
+        width: 100%;
+        margin: 3rem auto;
+        margin-bottom: 8rem;
+        cursor: pointer;
+        padding: 0 5.5rem;
+        
+        .files__file {
+            margin: 3rem 0;
+            border: 3px solid white;
+            border-radius: 1rem;
+            padding: 1rem;
+        }
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .unit-module--units {
+        margin-top: -7rem;
+
+    }
+}
